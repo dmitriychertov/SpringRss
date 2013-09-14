@@ -23,6 +23,7 @@ import com.karmanov.rss.model.Channel;
 /**
  * 
  * @author Dmitriy.Chertov
+ * @date 12/13/2013
  * 
  */
 
