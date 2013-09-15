@@ -13,7 +13,6 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -31,7 +30,7 @@ import com.karmanov.rss.model.Channel;
 @Path("/top")
 public class RssController {
 	
-	Logger logger = Logger.getLogger(RssController.class);
+	/*Logger logger = Logger.getLogger(RssController.class);*/
 	
 	@Autowired
 	ChannelDaoImpl channelDao;
@@ -45,7 +44,7 @@ public class RssController {
 	@Path("/channels")
 	@Produces(MediaType.APPLICATION_XML)
 	public Channel getChannelByName() {
-		logger.info("getAllChannels() request received....");
+		/*logger.info("getAllChannels() request received....");*/
 		return channelDao.getChannelByName("dzone");
 	}
 	
@@ -57,7 +56,7 @@ public class RssController {
 	@Path("/allchannels")
 	@Produces(MediaType.APPLICATION_XML)
 	public List<Channel> findAllChannels() {
-		logger.info("findAllChannels() request received....");
+		/*logger.info("findAllChannels() request received....");*/
 		return channelDao.findAllChannels();
 	}
 	
